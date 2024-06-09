@@ -5,16 +5,16 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.graphQL.Entity.Student;
-import com.graphQL.Repository.StudentRepository;
+import com.graphQL.DAO.StudentDAO;
+import com.graphQL.Service.StudentService;
 
 @RestController
 public class StudentController {
     
     @Autowired
-    private StudentRepository studentRepository;
+    private StudentService studentService;
     @PostMapping("/add")
-    public Student add(@RequestBody Student student){
-        return studentRepository.save(student);
+    public String add(@RequestBody StudentDAO studentDAO){
+        return studentService.addStudent(studentDAO);
     }
 }
