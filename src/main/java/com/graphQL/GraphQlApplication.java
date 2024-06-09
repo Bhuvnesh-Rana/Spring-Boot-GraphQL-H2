@@ -23,13 +23,13 @@ public class GraphQlApplication implements CommandLineRunner{
 		StudentDAO sd = new StudentDAO();
 		sd.setName("Happy");
 		sd.setAddress("#1234");
-		sd.setGender('M');
+		sd.setGender("M");
 		sd.setRollNo(12);
 
 		StudentDAO sd1 = new StudentDAO();
 		sd1.setName("Lapd");
 		sd1.setAddress("#221");
-		sd1.setGender('F');
+		sd1.setGender("F");
 		sd1.setRollNo(14);
 
 		studentService.addStudent(sd);

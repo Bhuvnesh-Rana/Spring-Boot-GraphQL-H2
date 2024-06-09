@@ -11,6 +11,6 @@ public class StudentDAO {
     private int id;
     private String name;
     private String address;
-    private char gender;
+    private String gender;
     private int rollNo;
 }
